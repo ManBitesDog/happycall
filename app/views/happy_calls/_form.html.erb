@@ -1,0 +1,65 @@
+<%= form_for(@happy_call) do |f| %>
+  <% if @happy_call.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@happy_call.errors.count, "error") %> prohibited this happy_call from being saved:</h2>
+
+      <ul>
+      <% @happy_call.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :calldate %><br>
+    <%= f.date_select :calldate %>
+  </div>
+  <div class="field">
+    <%= f.label :brnm %><br>
+    <%= f.text_field :brnm %>
+  </div>
+  <div class="field">
+    <%= f.label :level %><br>
+    <%= f.text_field :level %>
+  </div>
+  <div class="field">
+    <%= f.label :empnm %><br>
+    <%= f.text_field :empnm %>
+  </div>
+  <div class="field">
+    <%= f.label :scrno %><br>
+    <%= f.text_field :scrno %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br>
+    <%= f.text_area :content %>
+  </div>
+  <div class="field">
+    <%= f.label :team %><br>
+    <%= f.text_field :team %>
+  </div>
+  <div class="field">
+    <%= f.label :callee %><br>
+    <%= f.text_field :callee %>
+  </div>
+  <div class="field">
+    <%= f.label :happycalldate %><br>
+    <%= f.date_select :happycalldate %>
+  </div>
+  <div class="field">
+    <%= f.label :happycallcontent %><br>
+    <%= f.text_area :happycallcontent %>
+  </div>
+  <div class="field">
+    <%= f.label :memo %><br>
+    <%= f.text_area :memo %>
+  </div>
+  <div class="field">
+    <%= f.label :calltype %><br>
+    <%= f.text_field :calltype %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

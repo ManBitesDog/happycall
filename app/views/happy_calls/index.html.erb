@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t('activerecord.models.happy_call') %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2"><%=t 'activerecord.attributes.happy_call.calldate' %></th>
+      <th colspan="5"><%=t 'caller' %></th>
+      <th colspan="5"><%=t 'called' %></th>
+      <th rowspan="2"><%=t 'activerecord.attributes.happy_call.calltype' %></th>
+      <th colspan="3" rowspan="2">Action</th>
+    </tr>
+    <tr>
+      <th><%=t 'activerecord.attributes.happy_call.brnm' %></th>
+      <th><%=t 'activerecord.attributes.happy_call.level' %></th>
+      <th><%=t 'activerecord.attributes.happy_call.empnm' %></th>
+      <th><%=t 'activerecord.attributes.happy_call.scrno' %></th>
+      <th><%=t 'activerecord.attributes.happy_call.content' %></th>
+      <th><%=t 'activerecord.attributes.happy_call.team' %></th>
+      <th><%=t 'activerecord.attributes.happy_call.callee' %></th>
+      <th><%=t 'activerecord.attributes.happy_call.happycalldate' %></th>
+      <th><%=t 'activerecord.attributes.happy_call.happycallcontent' %></th>
+      <th><%=t 'activerecord.attributes.happy_call.memo' %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @happy_calls.each do |happy_call| %>
+      <tr>
+        <td><%= happy_call.calldate %></td>
+        <td><%= happy_call.brnm %></td>
+        <td><%= happy_call.level %></td>
+        <td><%= happy_call.empnm %></td>
+        <td><%= happy_call.scrno %></td>
+        <td><%= happy_call.content %></td>
+        <td><%= happy_call.team %></td>
+        <td><%= happy_call.callee %></td>
+        <td><%= happy_call.happycalldate %></td>
+        <td><%= happy_call.happycallcontent %></td>
+        <td><%= happy_call.memo %></td>
+        <td><%= happy_call.calltype %></td>
+        <td><%= link_to 'Show', happy_call %></td>
+        <td><%= link_to 'Edit', edit_happy_call_path(happy_call) %></td>
+        <td><%= link_to 'Destroy', happy_call, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '등록하기', new_happy_call_path %>

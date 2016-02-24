@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  calldate: 2016-02-24
+  brnm: MyString
+  level: MyString
+  empnm: MyString
+  scrno: MyString
+  content: MyText
+  team: MyString
+  callee: MyString
+  happycalldate: 2016-02-24
+  happycallcontent: MyText
+  memo: MyText
+  calltype: MyString
+
+two:
+  calldate: 2016-02-24
+  brnm: MyString
+  level: MyString
+  empnm: MyString
+  scrno: MyString
+  content: MyText
+  team: MyString
+  callee: MyString
+  happycalldate: 2016-02-24
+  happycallcontent: MyText
+  memo: MyText
+  calltype: MyString
