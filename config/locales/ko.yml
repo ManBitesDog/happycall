@@ -77,10 +77,18 @@ ko:
       minute: "분"
       second: "초"
 
+  show: "보기"
+  edit: "수정"
+  destroy: "삭제"
+  new: "신규"
+  back: "돌아가기"
+
+
   new_happy_call: "등록하기"
   caller: "송화자"
   called: "수화자"
 
+  happycall: "해피콜"
   activerecord:
     models:
       happy_call: "해피콜"

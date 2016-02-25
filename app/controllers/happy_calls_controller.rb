@@ -4,7 +4,7 @@ class HappyCallsController < ApplicationController
   # GET /happy_calls
   # GET /happy_calls.json
   def index
-    @happy_calls = HappyCall.all
+    @happy_calls = HappyCall.all.order(:calldate)
   end
 
   # GET /happy_calls/1

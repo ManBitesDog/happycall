@@ -33,16 +33,16 @@
         <td><%= happy_call.level %></td>
         <td><%= happy_call.empnm %></td>
         <td><%= happy_call.scrno %></td>
-        <td><%= happy_call.content %></td>
+        <td><%= nl2br(happy_call.content).html_safe %></td>
         <td><%= happy_call.team %></td>
         <td><%= happy_call.callee %></td>
         <td><%= happy_call.happycalldate %></td>
-        <td><%= happy_call.happycallcontent %></td>
-        <td><%= happy_call.memo %></td>
+        <td><%= nl2br(happy_call.happycallcontent).html_safe %></td>
+        <td><%= nl2br(happy_call.memo).html_safe %></td>
         <td><%= happy_call.calltype %></td>
-        <td><%= link_to 'Show', happy_call %></td>
-        <td><%= link_to 'Edit', edit_happy_call_path(happy_call) %></td>
-        <td><%= link_to 'Destroy', happy_call, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('show'), happy_call %></td>
+        <td><%= link_to t('edit'), edit_happy_call_path(happy_call) %></td>
+        <td><%= link_to t('destroy'), happy_call, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -50,4 +50,4 @@
 
 <br>
 
-<%= link_to '등록하기', new_happy_call_path %>
+<%= link_to t('new_happy_call'), new_happy_call_path %>

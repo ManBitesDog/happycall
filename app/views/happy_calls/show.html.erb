@@ -1,64 +1,55 @@
 <p id="notice"><%= notice %></p>
+<h1><%= t('activerecord.models.happy_call') + " ID : #{@happy_call.id.to_s}" %></h1>
+<table>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.calldate' %></th>
+    <td><%= @happy_call.calldate %></td>
+  </tr>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.brnm' %></th>
+    <td><%= @happy_call.brnm %></td>
+  </tr>
+  <tr>
+    <th> <%=t 'activerecord.attributes.happy_call.level' %></th>
+    <td><%= @happy_call.level %></td>
+  </tr>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.empnm' %></th>
+    <td><%= @happy_call.empnm %></td>
+  </tr>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.scrno' %></th>
+    <td><%= @happy_call.scrno %></td>
+  </tr>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.content' %></th>
+    <td><%= @happy_call.content %></td>
+  </tr>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.team' %></th>
+    <td><%= @happy_call.team %></td>
+  </tr>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.callee' %></th>
+    <td><%= @happy_call.callee %></td>
+  </tr>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.happycalldate' %></th>
+    <td><%= @happy_call.happycalldate %></td>
+  </tr>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.happycallcontent' %></th>
+    <td><%= @happy_call.happycallcontent %></td>
+  </tr>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.memo' %></th>
+    <td><%= @happy_call.memo %></td>
+  </tr>
+  <tr>
+    <th><%=t 'activerecord.attributes.happy_call.calltype' %></th>
+    <td><%= @happy_call.calltype %></td>
+  </tr>
+</table>
 
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.calldate' %>:</strong>
-  <%= @happy_call.calldate %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.brnm' %>:</strong>
-  <%= @happy_call.brnm %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.level' %>:</strong>
-  <%= @happy_call.level %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.empnm' %>:</strong>
-  <%= @happy_call.empnm %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.scrno' %>:</strong>
-  <%= @happy_call.scrno %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.content' %>:</strong>
-  <%= @happy_call.content %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.team' %>:</strong>
-  <%= @happy_call.team %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.callee' %>:</strong>
-  <%= @happy_call.callee %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.happycalldate' %>:</strong>
-  <%= @happy_call.happycalldate %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.happycallcontent' %>:</strong>
-  <%= @happy_call.happycallcontent %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.memo' %>:</strong>
-  <%= @happy_call.memo %>
-</p>
-
-<p>
-  <strong><%=t 'activerecord.attributes.happy_call.calltype' %>:</strong>
-  <%= @happy_call.calltype %>
-</p>
-
-<%= link_to 'Edit', edit_happy_call_path(@happy_call) %> |
-<%= link_to 'Back', happy_calls_path %>
+<%= link_to t('edit'), edit_happy_call_path(@happy_call) %> |
+<%= link_to t('back'), happy_calls_path %>
